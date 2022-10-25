@@ -1,0 +1,62 @@
+﻿@model UserManagement.Application.Contracts.User.UserEdit
+@{
+    ViewData["title"] = "ویرایش کاربر";
+}
+<div class="modal-header">
+    <h4 class="modal-title">ویرایش کاربر @Model.FullName</h4>
+    <a class="btn btn-sm btn-icon btn-outline-warning" asp-page="./Index"><i class="fa fa-close"></i></a>
+</div>
+
+<form class="needs-validation" novalidate asp-page="./Index" asp-page-handler="Edit" method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="FullName">نام کامل</label>
+                    <input id="Fullname" type="text" class="form-control" required asp-for="FullName">
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="UserName">نام کاربری</label>
+                    <input id="Username" type="text" class="form-control" required asp-for="UserName">
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="Mobile">شماره تماس</label>
+                    <input id="Mobile" dir="ltr" type="text" required class="form-control" asp-for="Mobile">
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="RoleId">وظیفه</label>
+                    <select id="RoleId" class="form-control" required asp-for="RoleId"
+                            asp-items='new SelectList(Model.Roles, "Id", "NamePersian")'>
+                        <option disabled value="" selected="">وظیفه ها ...</option>
+                    </select>
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="ProfilePhoto" class="form-label">عکس</label>
+                    <input type="file" class="form-control" name="ProfilePhoto" accept=".webp">
+                </div>
+            </div>
+        </div>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-icon btn-outline-success"><i class="fa fa-save"></i></button>
+        </div>
+    </div>
+</form>

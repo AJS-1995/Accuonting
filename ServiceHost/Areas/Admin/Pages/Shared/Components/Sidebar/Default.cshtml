@@ -1,0 +1,41 @@
+﻿@model _01_MarketFazliQuery.SidebarModel
+
+<aside class="main-sidebar">
+    <section class="sidebar">
+        <ul class="sidebar-menu" data-widget="tree">
+
+            <li class="user-profile treeview">
+                <a href="#">
+                    @if (Model.UsersQueryModel != null)
+                    {
+                        @if (Model.UsersQueryModel.ProfilePhoto != null && Model.UsersQueryModel.ProfilePhoto != "")
+                        {
+                            <img src="~/Uploader/@Model.UsersQueryModel.ProfilePhoto" alt="user">
+                        }
+                        else
+                        {
+                            <img src="~/Uploader/Images/Users.webp" alt="user">
+                        }
+                        <span>
+                            @if (Model.UsersQueryModel.FullName == "Administrator")
+                            {
+                                <span class="d-block font-weight-600 font-size-16">مدیر کُل</span>
+                            }
+                            else
+                            {
+                                <span class="d-block font-weight-600 font-size-16">@Model.UsersQueryModel.FullName</span>
+                            }
+                            <span class="email-id text-center">@Model.UsersQueryModel.RolePersian</span>
+                        </span>
+                    }else
+                    {
+                        <script>
+                            window.location.href = "/Company";
+                        </script>
+                    }
+                </a>
+            </li>
+
+        </ul>
+    </section>
+</aside>

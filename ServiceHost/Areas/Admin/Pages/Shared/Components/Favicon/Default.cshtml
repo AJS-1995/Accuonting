@@ -1,0 +1,18 @@
+﻿@model _01_QueryManagement.Contracts.Favicon.FaviconQueryModel
+
+@if (Model.Logo != null && Model.Logo != "")
+{
+    <link rel="icon" href="~/Uploader/@Model.Logo">
+}
+else
+{
+    <link rel="icon" href="~/favicon.ico">
+}
+@if (Model.Name != null && Model.Name != "")
+{
+    <title> سیستم حسابداری @Model.Name | @ViewData["title"] </title>
+}
+else
+{
+    <title> سیستم حسابداری حساب کتاب | @ViewData["title"] </title>
+}

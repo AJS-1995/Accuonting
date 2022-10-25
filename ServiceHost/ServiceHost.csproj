@@ -1,0 +1,233 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<ItemGroup>
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\.bower.json" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\bower.json" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\MIT-LICENSE.txt" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\AUTHORS.txt" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\bower.json" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\MIT-LICENSE.txt" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\package.json" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\data\mixed_sort.html" />
+	  <Content Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\index.html" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\dist\jquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\dist\jquery.min.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\dist\jquery.min.map" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\jsonp.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\load.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\parseJSON.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\parseXML.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\script.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\var\nonce.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\var\rquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\ajax\xhr.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes\attr.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes\classes.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes\prop.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\attributes\val.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\callbacks.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core\access.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core\init.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core\parseHTML.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core\ready.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\core\var\rsingleTag.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\addGetHookIf.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\curCSS.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\defaultDisplay.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\hiddenVisibleSelectors.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\swap.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\var\cssExpand.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\var\isHidden.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\var\rmargin.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\css\var\rnumnonpx.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\data.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\data\accepts.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\data\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\deferred.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\deprecated.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\dimensions.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\effects.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\effects\animatedSelector.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\effects\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\effects\Tween.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\event.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\event\ajax.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\event\alias.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\event\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\exports\amd.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\exports\global.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\intro.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\jquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\manipulation.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\manipulation\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\manipulation\var\rcheckableType.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\manipulation\_evalUrl.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\offset.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\outro.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\queue.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\queue\delay.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\selector-sizzle.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\selector.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\serialize.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\sizzle\dist\sizzle.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\sizzle\dist\sizzle.min.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\sizzle\dist\sizzle.min.map" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\traversing.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\traversing\findFilter.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\traversing\var\rneedsContext.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\class2type.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\concat.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\deletedIds.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\hasOwn.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\indexOf.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\pnum.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\push.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\rnotwhite.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\slice.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\strundefined.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\var\toString.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\bower_components\jquery\src\wrap.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\.bowerrc" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\.jscsrc" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\.npmignore" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\CONTRIBUTING.md" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\dist\jquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\dist\jquery.min.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\dist\jquery.min.map" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\README.md" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\jsonp.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\load.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\parseJSON.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\parseXML.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\script.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\var\nonce.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\var\rquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\ajax\xhr.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes\attr.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes\classes.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes\prop.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\attributes\val.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\callbacks.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core\access.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core\init.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core\parseHTML.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core\ready.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\core\var\rsingleTag.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\addGetHookIf.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\curCSS.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\defaultDisplay.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\hiddenVisibleSelectors.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\swap.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\var\cssExpand.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\var\isHidden.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\var\rmargin.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\css\var\rnumnonpx.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\data.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\data\accepts.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\data\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\deferred.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\deprecated.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\dimensions.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\effects.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\effects\animatedSelector.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\effects\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\effects\Tween.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\event.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\event\ajax.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\event\alias.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\event\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\exports\amd.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\exports\global.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\intro.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\jquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\manipulation.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\manipulation\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\manipulation\var\rcheckableType.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\manipulation\_evalUrl.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\offset.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\outro.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\queue.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\queue\delay.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\selector-sizzle.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\selector.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\serialize.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\dist\sizzle.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\dist\sizzle.min.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\dist\sizzle.min.map" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\data\empty.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\data\testinit.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\jquery.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\unit\extending.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\unit\selector.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\sizzle\test\unit\utilities.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\traversing.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\traversing\findFilter.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\traversing\var\rneedsContext.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\class2type.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\concat.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\deletedIds.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\hasOwn.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\indexOf.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\pnum.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\push.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\rnotwhite.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\slice.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\strundefined.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\support.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\var\toString.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\flexslider\node_modules\jquery\src\wrap.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\jquery-multi-select\jquery.multi-select.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\jquery-multi-select\jquery.quicksearch.js" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\popper\.github\ISSUE_TEMPLATE.md" />
+	  <None Include="wwwroot\Theme\assets\vendor_components\popper\.github\PULL_REQUEST_TEMPLATE.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.9" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
+		<PackageReference Include="Nancy" Version="2.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\01_MarketFazliQuery\01_QueryManagement.csproj" />
+	  <ProjectReference Include="..\0_Framework\0_Framework.csproj" />
+	  <ProjectReference Include="..\CompanyManagement.Configuration\CompanyManagement.Configuration.csproj" />
+	  <ProjectReference Include="..\MoneyManagement.Configuration\MoneyManagement.Configuration.csproj" />
+	  <ProjectReference Include="..\UserManagement.Configuration\UserManagement.Configuration.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\Theme\assets\vendor_components\flat-color-icons\PNG\512\A\" />
+	  <Folder Include="wwwroot\Uploader\Company\" />
+	  <Folder Include="wwwroot\Uploader\Users\" />
+	</ItemGroup>
+	
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>

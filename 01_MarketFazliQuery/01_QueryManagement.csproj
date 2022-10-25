@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>_01_QueryManagement</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompanyMangement.Infrastructure.EFCore\CompanyMangement.Infrastructure.EFCore.csproj" />
+    <ProjectReference Include="..\UserMangement.Infrastructure.EFCore\UserMangement.Infrastructure.EFCore.csproj" />
+  </ItemGroup>
+
+</Project>

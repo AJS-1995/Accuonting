@@ -1,0 +1,180 @@
+﻿@page
+@model ServiceHost.Areas.Admin.Pages.Security.Users.IndexModel
+@inject _0_Framework.Application.IAuthHelper AuthHelper;
+@using UserManagement.Configuration.Permissions;
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "مدیریت کاربران";
+    var currentAccout = AuthHelper.CurrentUserInfo();
+}
+<section class="px-15 pt-15">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between bb-1 border-info">
+                    <div class="header-title">
+                        @if (Model.permissionQueryModels.AddUsers == UserPermissions.AddUsers || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                        {
+                            <a class="btn btn-sm btn-icon btn-outline-success mx-2" title="ثبت جدید" href="#showmodal=@Url.Page("./Index", "Create")"><i class="mdi mdi-account-multiple-plus"></i></a>
+                        }
+                        @if (Model.permissionQueryModels.RemovedUsers == UserPermissions.RemovedUsers || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                        {
+                            <a class="btn btn-sm btn-icon btn-outline-danger mx-2" title="حذف شده ها" href="#showmodal=@Url.Page("./Index", "Removed")"><i class="mdi mdi-delete-forever"></i></a>
+                        }
+                        @if (Model.permissionQueryModels.ActivedUsers == UserPermissions.ActivedUsers || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                        {
+                            <a class="btn btn-sm btn-icon btn-outline-warning mx-2" title="غیرفعال ها" href="#showmodal=@Url.Page("./Index", "Actived")"><i class="mdi mdi-cup-off"></i></a>
+                        }
+                    </div>
+                </div>
+                @if (Model.permissionQueryModels.SearchUser == UserPermissions.SearchUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                {
+                    <div class="card-body">
+                        <form class="form-inline" method="Post">
+                            <div class="row">
+                                <div class="col-xl-3 col-6">
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="SearchModel.FullName">نام مکمل</label>
+                                        <input name="SearchModel.FullName" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-6">
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="SearchModel.UserName">نام کاربری</label>
+                                        <input name="SearchModel.UserName" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-6">
+                                    <div class="form-group">
+                                        <label class="form-label" asp-for="SearchModel.Mobile">شماره تماس</label>
+                                        <input name="SearchModel.Mobile" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-6">
+                                    <div class="form-group">
+                                        <label class="form-label" for="SearchModel.RoleId">وظیفه</label>
+                                        <select class="form-control" name="SearchModel.RoleId" asp-items="Model.Roles">
+                                            <option disabled value="" selected="">وظیفه ...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-sm btn-icon btn-outline-info" title="جستجو"><i class="mdi mdi-account-search"></i></button>
+                                    <a class="btn btn-sm btn-icon btn-outline-primary" asp-page="./Index" title="لیست"><i class="mdi mdi-account-multiple"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+@if (Model.permissionQueryModels.ListUsers == UserPermissions.ListUsers || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+{
+    <section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between bb-1 border-info">
+                        <div class="header-title">
+                            <span class="card-title mx-2">لیست کاربران</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example" class="table table-bordered table-hover display nowrap margin-top-10 w-p100 js-serial">
+                                <thead class="table-Primary">
+                                    <tr>
+                                        <th class="text-center">عکس</th>
+                                        <th class="text-center">نام مکمل</th>
+                                        <th class="text-center">نام کاربری</th>
+                                        <th class="text-center">شماره تماس</th>
+                                        <th class="text-center">وظیفه</th>
+                                        <th class="text-center">عملیات</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    @foreach (var item in Model.users)
+                                    {
+                                        <tr>
+                                            <td class="text-center">
+                                                <a href="#">
+                                                    @if (item.ProfilePhoto != null && item.ProfilePhoto != "")
+                                                    {
+                                                        <img class="ProfilePhoto" src="~/Uploader/@item.ProfilePhoto" alt="user">
+                                                    }
+                                                    else
+                                                    {
+                                                        <img class="ProfilePhoto" src="~/Uploader/Images/Users.webp" alt="user">
+                                                    }
+                                                </a>
+                                            </td>
+                                            <td class="text-center">@item.FullName</td>
+                                            <td class="text-center">
+                                                @if (item.Id == currentAccout.Id || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                {
+                                                    @item.UserName
+                                                }
+                                            </td>
+                                            <td class="text-center" dir="ltr">@item.Mobile</td>
+                                            <td class="text-center">@item.RolePersian</td>
+                                            <td class="text-center">
+                                                @if (item.Id == currentAccout.Id || Model.permissionQueryModels.EditUser == UserPermissions.EditUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                {
+                                                    <a class="btn btn-sm btn-icon btn-outline-warning" title="ویرایش" href="#showmodal=@Url.Page("./Index", "Edit", new { id = item.Id })"><i class="mdi mdi-account-edit"></i></a>
+                                                }
+                                                @if (item.Id == currentAccout.Id || Model.permissionQueryModels.ChangePasswordUser == UserPermissions.ChangePasswordUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                {
+                                                    <a class="btn btn-sm btn-icon btn-outline-primary" title="تغیر رمز" href="#showmodal=@Url.Page("./Index", "ChangePassword", new { id = item.Id })"><i class="mdi mdi-account-key"></i></a>
+                                                }
+                                                @if (item.Id != currentAccout.Id)
+                                                {
+                                                    if (Model.permissionQueryModels.RemoveUser == UserPermissions.RemoveUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                    {
+                                                        <a class="btn btn-sm btn-icon btn-outline-danger" title="حذف" href="#showmodal=@Url.Page("./Index", "Remove", new { id = item.Id })"><i class="mdi mdi-account-multiple-minus"></i></a>
+                                                    }
+                                                    @if (Model.permissionQueryModels.ActiveUser == UserPermissions.ActiveUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                    {
+                                                        <a class="btn btn-sm btn-icon btn-outline-danger" title="غیر فعال" href="#showmodal=@Url.Page("./Index", "Off", new { id = item.Id })"><i class="mdi mdi-account-off"></i></a>
+                                                    }
+                                                }
+                                                @if (Model.permissionQueryModels.LevelUser == UserPermissions.LevelUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                {
+                                                    <a class="btn btn-sm btn-icon btn-outline-secondary" title="سطح دسترسی" asp-page="./Level" asp-route-slug="@item.Slug"><i class="mdi mdi-account-settings-variant"></i></a>
+                                                }
+                                                @if (Model.permissionQueryModels.SavedUser == UserPermissions.SavedUser || Model.permissionQueryModels.AdminUsers == UserPermissions.AdminUsers)
+                                                {
+                                                    <a class="btn btn-sm btn-icon btn-outline-pink" title="ثبت کننده" href="#showmodal=@Url.Page("./Index", "Saved", new { id = item.Id })"><i class="mdi mdi-account-switch"></i></a>
+                                                }
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}
+@section Scripts
+    {
+    <script src="~/Theme/assets/vendor_components/datatable/datatables.js"></script>
+    <script src="~/Theme/material-rtl/js/pages/data-table.js"></script>
+    <script>
+        function addRowCount(tableAttr) {
+            $(tableAttr).each(function () {
+                $('th:first-child, thead td:first-child', this).each(function () {
+                    var tag = $(this).prop('tagName');
+                    $(this).before('<' + tag + ' class="text-center" >#</' + tag + '>');
+                });
+                $('td:first-child', this).each(function (i) {
+                    $(this).before('<td class="text-center">' + (i + 1) + '</td>');
+                });
+            });
+        }
+        addRowCount('.js-serial');
+    </script>
+}

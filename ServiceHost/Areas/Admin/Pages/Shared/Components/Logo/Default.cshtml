@@ -1,0 +1,28 @@
+﻿@model _01_QueryManagement.Contracts.Favicon.FaviconQueryModel
+
+<a asp-page="/Index" class="logo">
+    <div class="logo-mini">
+        @if (Model.Logo != null && Model.Logo != "")
+        {
+            <span class="light-logo"><img src="~/Uploader/@Model.Logo" alt="logo" width="45"></span>
+            <span class="dark-logo"><img src="~/Uploader/@Model.Logo" alt="logo" width="45"></span>
+        }
+        else
+        {
+            <span class="light-logo"><b>A_B</b></span>
+            <span class="dark-logo"><b>A_B</b></span>
+        }
+    </div>
+    <div class="logo-lg">
+        @if (Model.Name != null && Model.Name != "")
+        {
+            <span class="light-logo"> <b> @Model.Name </b> </span>
+            <span class="dark-logo"> <b> @Model.Name </b> </span>
+        }
+        else
+        {
+            <span class="light-logo"> <b> حساب کتاب </b> </span>
+            <span class="dark-logo"> <b> حساب کتاب </b> </span>
+        }
+    </div>
+</a>

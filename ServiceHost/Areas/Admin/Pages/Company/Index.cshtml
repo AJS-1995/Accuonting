@@ -1,0 +1,60 @@
+﻿@model CompanyManagement.Application.Contracts.Company.CompanyEdit
+@{
+    ViewData["title"] = "ویرایش کمپنی";
+}
+<div class="modal-header">
+    <h4 class="modal-title">ویرایش کمپنی @Model.Name</h4>
+    <a class="btn btn-sm btn-icon btn-outline-warning" asp-page="/Index"><i class="fa fa-close"></i></a>
+</div>
+
+<form class="needs-validation" novalidate asp-page="/Index" asp-page-handler="CompanyEdit" method="post"
+      data-ajax="true"
+      data-callback=""
+      data-action="Refresh"
+      enctype="multipart/form-data">
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="Name">نام کمپنی</label>
+                    <input id="Name" type="text" class="form-control" required asp-for="Name">
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="Mobile">شماره تماس</label>
+                    <input id="Mobile" dir="ltr" type="text" class="form-control" asp-for="Mobile">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="input-email">ایمیل</label>
+                    <input id="input-email" dir="ltr" type="text" placeholder="@ViewData["Email"]" class="form-control input-mask" asp-for="Email" data-inputmask="'alias': 'email'">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="form-label" for="MoneyId">پول اصلی</label>
+                    <select id="MoneyId" class="form-control" required asp-for="MoneyId"
+                            asp-items='new SelectList(Model.Moneys, "Id", "NameCountry")'>
+                        <option disabled value="" selected="">پول ها ...</option>
+                    </select>
+                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="form-group">
+                    <label for="Logo" class="form-label">عکس</label>
+                    <input type="file" class="form-control" name="Logo" accept=".ico">
+                </div>
+            </div>
+        </div>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-sm btn-icon btn-outline-success"><i class="fa fa-save"></i></button>
+        </div>
+    </div>
+</form>

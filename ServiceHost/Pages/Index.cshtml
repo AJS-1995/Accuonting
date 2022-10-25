@@ -1,0 +1,77 @@
+﻿@page
+@model ServiceHost.Pages.IndexModel
+@{
+	Layout = "Shared/_Layout";
+	ViewData["Title"] = "صفحه ورود";
+}
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0 text-center d-none d-md-block">
+	<div class="border-grey border-lighten-3 m-0 box-shadow-0">
+		@if (ViewData["Logo"] != null && ViewData["Logo"] != "")
+		{
+			<img src="~/Uploader/@ViewData["Logo"]" class="card-account-img width-200" alt="card-account-img">
+		}else
+		{
+			<img src="~/favicon.ico" class="card-account-img width-200" alt="card-account-img">
+		}
+	</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0">
+	<div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right">
+		<div class="card-content">
+			<div class="card-body p-2">
+				<p class="text-center h5 p-1 text-capitalize">خوش آمدید به سیستم حسابداری @ViewData["Company"] !</p>
+				<p class="mb-2 text-center">لطفا‌ً اطلاعات ورود خود را وارد کنید .</p>
+				<form class="form-horizontal form-signin needs-validation" novalidate method="post" asp-page-handler="Login">
+					<fieldset class="form-label-group">
+						<input type="text" class="form-control" id="Username" name="Username" placeholder="نام کاربری شما" required="" autofocus="">
+						<label for="Username">نام کاربری</label>
+						<div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+					</fieldset>
+					<fieldset class="form-label-group">
+						<input type="password" class="form-control" id="Password" name="Password" placeholder="رمزعبور شما" required="" autofocus="">
+						<label for="Password">رمزعبور</label>
+						<div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+					</fieldset>
+					<div class="form-group row">
+						<div class="col-12 text-center">
+							<a href="#" class="card-link">فراموشی رمز عبور ؟</a>
+						</div>
+					</div>
+					<button type="submit" class="btn-gradient-primary btn-block my-1">ورود</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+@if (Model.Message != null)
+{
+	<input type="hidden" id="message" value="@Model.Message" />
+	<input type="hidden" id="isSuccedded" value="@Model.IsSuccedded" />
+	@section Scripts {
+	<script>
+		var message = document.getElementById("message").value;
+		var isSuccedded = document.getElementById("isSuccedded").value;
+		if (isSuccedded == false) {
+			Swal.fire({
+				position: 'center',
+				icon: 'error',
+				title: message,
+				showConfirmButton: false,
+				timer: 1500
+			}).then(function (isConfirm) {
+				window.location.href = "/Index";
+			});
+		} else {
+			Swal.fire({
+				position: 'center',
+				icon: 'success',
+				title: message,
+				showConfirmButton: false,
+				timer: 1500
+			}).then(function (isConfirm) {
+				window.location.href = "/Admin/Index";
+			});
+		}
+	</script>
+	}
+}

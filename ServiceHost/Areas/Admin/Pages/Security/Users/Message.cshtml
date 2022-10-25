@@ -1,0 +1,26 @@
+﻿@model _01_QueryManagement.Messages
+@{
+}
+<form class="needs-validation" novalidate asp-page="./Index" asp-page-handler="@Model.Href" method="post">
+    <div class="modal-body">
+        <div class="row">
+            <div class="form-group col-sm-12 text-center">
+                <img class="col-sm-4" src="~/Uploader/Images/@Model.Icon" alt="icon" style="width:55px">
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-sm-12 text-center">
+                <label class="form-check-label" for="Receipt">@Model.Message</label>
+            </div>
+        </div>
+        <input type="hidden" asp-for="Id" value="@Model.Id" />
+        <div class="row text-center">
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-sm btn-icon btn-outline-success"><i class="fa fa-check"></i></button>
+            </div>
+            <div class="col-sm-6">
+                <a class="btn btn-sm btn-icon btn-outline-warning" asp-page="./Index"><i class="fa fa-close"></i></a>
+            </div>
+        </div>
+    </div>
+</form>

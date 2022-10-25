@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html class="loading" lang="fa" data-textdirection="rtl">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta name="description" content="سیستم حسابداری مارکت فاضلی">
+	<meta name="keywords" content="حسابداری ، نرم افزار ، وب سایت">
+	<meta name="author" content="عبدالجبار سروری">
+	<title>سیستم حسابداری @ViewData["Company"] | @ViewData["Title"]</title>
+	@if (ViewData["Logo"] != null && ViewData["Logo"] != "")
+	{
+		<link rel="shortcut icon" href="~/Uploader/@ViewData["Logo"]" type="image/x-icon">
+	}
+	else
+	{
+		<link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon">
+	}
+	<link rel="stylesheet" type="text/css" href="~/Templet/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="~/Templet/bootstrap-extended.css">
+	<link rel="stylesheet" type="text/css" href="~/Templet/components.css">
+	<link rel="stylesheet" type="text/css" href="~/Templet/account-login.css">
+	<link rel="stylesheet" type="text/css" href="~/sweetalert2/sweetalert2.css">
+</head>
+<body class="vertical-layout 1-column bg-full-screen-image blank-page blank-page">
+	<div class="app-content content">
+		<div class="content-wrapper">
+			<div class="content-header row">
+			</div>
+			<div class="content-body">
+				<section id="account-login" class="flexbox-container">
+					<div class="col-12 d-flex align-items-center justify-content-center">
+						@RenderBody()
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/sweetalert2/sweetalert2.js"></script>
+	<script src="~/Theme/assets/vendor_components/formatter/formatter.js"></script>
+	<script src="~/Theme/assets/vendor_components/formatter/jquery.formatter.js"></script>
+	<script src="~/Theme/material-rtl/js/pages/formatter.js"></script>
+	<script src="~/Theme/material-rtl/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+	<script src="~/Theme/material-rtl/js/pages/form-mask.init.js"></script>
+	@await RenderSectionAsync("Scripts",required:false)
+</body>
+</html>

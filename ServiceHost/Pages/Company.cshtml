@@ -1,0 +1,87 @@
+﻿@page
+@model ServiceHost.Pages.CompanyModel
+@{
+    Layout = "Shared/_Layout";
+	ViewData["Title"] = "ثبت کمپنی";
+	ViewData["Company"] = "حساب کتاب";
+}
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0 text-center d-none d-md-block">
+	<div class="border-grey border-lighten-3 m-0 box-shadow-0">
+		<img src="~/Templet/favicon.png" class="card-account-img width-200" alt="card-account-img">
+	</div>
+</div>
+<div class="col-xl-3 col-lg-4 col-md-5 col-sm-5 col-12 p-0">
+	<div class="card border-grey border-lighten-3 m-0 box-shadow-0 card-account-right">
+		<div class="card-content">
+			<div class="card-body p-2">
+				<p class="text-center h5 p-1 text-capitalize">خوش آمدید به سیستم حسابداری حساب کتاب !</p>
+				<p class="mb-2 text-center">لطفا‌ً اطلاعات کمپنی خود را وارد کنید .</p>
+				<form class="form-horizontal form-signin needs-validation" novalidate method="post" enctype="multipart/form-data">
+					<fieldset class="form-label-group">
+						<input type="text" class="form-control" id="Name" name="Name" placeholder="نام کمپنی" required="" autofocus="">
+						<label for="Name">نام کمپنی</label>
+					</fieldset>
+					<div class="form-group">
+						<input id="Mobile" dir="ltr" type="text" class="form-control" name="Mobile">
+					</div>
+					<div class="form-group">
+						<input id="input-email" dir="ltr" name="Email" class="form-control input-mask" placeholder="@ViewData["Email"]" data-inputmask="'alias': 'email'">
+					</div>
+					<div class="form-group">
+						<select id="MoneyId" class="form-control" required="" name="MoneyId" asp-items="@Model.money">
+							<option disabled value="" selected="">پول اصلی ...</option>
+						</select>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-group">
+								<input type="file" class="form-control" name="Logo" accept=".ico">
+							</div>
+						</div>
+					</div>
+					<input type="hidden" id="message" value="@Model.Message" />
+					<input type="hidden" id="isSuccedded" value="@Model.IsSuccedded" />
+					<button type="submit" class="btn-gradient-primary btn-block my-1">ثبت</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+@section Scripts
+{
+	<script>
+
+		$('#Mobile').formatter({
+			'pattern': '+({{99}})-{{99}}-{{9999999}}',
+			'persistent': true
+		});
+	</script>
+	@if (Model.Message != null)
+	{
+		<script>
+			var message = document.getElementById("message").value;
+			var isSuccedded = document.getElementById("isSuccedded").value;
+			if (isSuccedded == false){
+				Swal.fire({
+					position: 'center',
+					icon: 'error',
+					title: message,
+					showConfirmButton: false,
+					timer: 1500
+				}).then(function (isConfirm) {
+					window.location.href = "./Company";
+				});
+			}else{
+				Swal.fire({
+					position: 'center',
+					icon: 'success',
+					title: message,
+					showConfirmButton: false,
+					timer: 1500
+				}).then(function (isConfirm) {
+					window.location.href = "./Register";
+				});
+			}
+		</script>
+	}
+}

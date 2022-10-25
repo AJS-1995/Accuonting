@@ -1,0 +1,115 @@
+﻿@using _0_Framework.Application
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="سیستم حسابداری | مارکیت فاضلی">
+    <meta name="author" content="عبدالجبار سروری">
+    @await Component.InvokeAsync("Favicon")
+    <link rel="stylesheet" href="~/Theme/assets/vendor_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor_components/datatable/datatables.css" />
+    <link rel="stylesheet" href="~/Theme/material-rtl/css/bootstrap-extend.css">
+    @RenderSection("Css", false)
+    <link rel="stylesheet" href="~/Theme/assets/vendor_components/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="~/Theme/assets/vendor_components/bootstrap-switch/switch.css">
+    <link rel="stylesheet" href="~/Theme/material-rtl/css/master_style.css">
+    <link rel="stylesheet" href="~/Theme/material-rtl/css/skins/_all-skins.css">
+    <link rel="stylesheet" type="text/css" href="~/sweetalert2/sweetalert2.css">
+</head>
+
+<body class="hold-transition skin-info-light sidebar-mini fixed rtl">
+    <div class="wrapper">
+
+        <header class="main-header">
+            @await Component.InvokeAsync("Logo")
+            <nav class="navbar navbar-static-top">
+                <div>
+                    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                </div>
+                <div class="navbar-custom-menu">
+                    @await Component.InvokeAsync("Navbar")
+                </div>
+            </nav>
+        </header>
+
+        @await Component.InvokeAsync("Sidebar")
+
+        <div class="content-wrapper">
+            <section class="px-15 pt-15">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-header d-flex justify-content-between bb-1 border-info">
+                                <div class="header-title">
+                                    <span class="card-title mx-2">تاریخ امروز</span>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-4 col-sm-2 text-center">
+                                            <label class="form-label">@DateTime.Now.DayOfWeek.ToDayFarsi()</label>
+                                    </div>
+                                <div class="col-4 col-sm-2 text-center">
+                                            <label class="form-label" for="SearchModel.UserName">@DateTime.Now.ToMonthFarsi()</label>
+                                    </div>
+                                <div class="col-4 col-sm-2 text-center">
+                                            <label class="form-label" for="SearchModel.Mobile">@DateTime.Now.ToFarsi()</label>
+                                    </div>
+                                <div class="col-6 col-sm-2 text-center">
+                                            <label class="form-label" for="SearchModel.RoleId">@DateTime.Now.ToDiscountFormat()</label>
+                                    </div>
+                                <div class="col-6 col-sm-3 text-center">
+                                            <label class="form-label" for="SearchModel.User_Id">@DateTime.Now.ToHijri()</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @RenderBody()
+        </div>
+
+        <footer class="main-footer" dir="ltr">
+            &copy; 2022 <b> Abdul Jabar _ Sarwari </b>. All Rights Reserved.
+        </footer>
+    </div>
+
+    <div id="MainModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content" id="ModalContent">
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/Theme/assets/vendor_components/popper/dist/popper.min.js"></script>
+    <script src="~/Theme/assets/vendor_components/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Theme/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Theme/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+    <script src="~/Theme/assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="~/Theme/assets/vendor_components/select2/dist/js/select2.full.js"></script>
+    <script src="~/Theme/material-rtl/js/pages/advanced-form-element.js"></script>
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="~/Theme/assets/vendor_components/formatter/formatter.js"></script>
+    <script src="~/Theme/assets/vendor_components/formatter/jquery.formatter.js"></script>
+    <script src="~/Theme/material-rtl/js/pages/formatter.js"></script>
+
+    <script src="~/Theme/material-rtl/inputmask/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="~/Theme/material-rtl/js/pages/form-mask.init.js"></script>
+
+    <script src="~/sweetalert2/sweetalert2.js"></script>
+
+    @RenderSection("Scripts", false)
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/Theme/material-rtl/js/template.js"></script>
+    <script src="~/Theme/material-rtl/js/demo.js"></script>
+</body>
+</html>

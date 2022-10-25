@@ -1,0 +1,34 @@
+﻿@model UserManagement.Application.Contracts.User.UserRemoved
+@{
+    ViewData["title"] = "لیست کاربران غیرفعال شده";
+}
+<div class="modal-header">
+    <h4 class="modal-title">لیست کاربران غیرفعال شده</h4>
+    <a class="btn btn-sm btn-icon btn-outline-warning" asp-page="./Index"><i class="fa fa-close"></i></a>
+</div>
+
+<div class="modal-body">
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover display nowrap margin-top-10 w-p100 js-serial">
+            <thead class="table-Primary">
+                <tr>
+                    <th class="text-center">نام مکمل</th>
+                    <th class="text-center">نام کاربری</th>
+                    <th class="text-center">عملیات</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                @foreach (var item in Model.UserRemoveds)
+                {
+                    <tr>
+                        <td class="text-center">@item.FullName</td>
+                        <td class="text-center">@item.UserName</td>
+                        <td class="text-center">
+                            <a class="btn btn-sm btn-icon btn-outline-danger" title="فعال کردن" href="#showmodal=@Url.Page("./Index", "On", new { id = item.Id })"><i class="mdi mdi-account-check"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

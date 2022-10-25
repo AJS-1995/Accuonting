@@ -1,0 +1,95 @@
+﻿@page "{slug}"
+@model ServiceHost.Areas.Admin.Pages.Security.Users.LevelModel
+@{
+    Layout = "Shared/_AdminLayout";
+    ViewData["title"] = "مدیریت کاربران";
+}
+<section class="content">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between bb-1 border-info">
+                    <div class="header-title">
+                        <a class="btn btn-sm btn-icon btn-outline-success mx-2" title="لیست کاربران" asp-page="./Index"><i class="mdi mdi-view-sequential"></i></a>
+                        <span class="card-title mx-2">سطح دسترسی - @Model.Command.FullName</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form class="needs-validation" novalidate method="post">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="form-group">
+                                    <label class="form-label" for="Permissions">سطح دسترسی</label>
+                                    <select required asp-for="Command.Permissions" asp-items="Model.Permissions" class="multi-select" multiple="multiple" id="my_multi_select3">
+                                    </select>
+                                    <div class="invalid-feedback">اطلاعات باید وارد شود !</div>
+                                </div>
+                            </div>
+                            <input type="hidden" asp-for="Command.Id" value="@Model.Command.Id" />
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-sm btn-icon btn-outline-success"><i class="fa fa-save"></i></button>
+                                <a class="btn btn-sm btn-icon btn-outline-warning" asp-page="./Index"><i class="fa fa-close"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@section Css
+    {
+    <link href="~/Theme/assets/vendor_components/jquery-multi-select/multi-select.css" rel="stylesheet" type="text/css" />
+}
+
+    @section Scripts
+    {
+    <script type="text/javascript" src="~/Theme/assets/vendor_components/jquery-multi-select/jquery.multi-select.js"></script>
+    <script type="text/javascript" src="~/Theme/assets/vendor_components/jquery-multi-select/jquery.quicksearch.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            $('#my_multi_select3').multiSelect({
+                selectableOptgroup: true,
+                selectableHeader:
+                    "<input type='text' class='form-control col-sm-4 search-input' autocomplete='off' placeholder='جستجو...'>",
+                selectionHeader:
+                    "<input type='text' class='form-control col-sm-4 search-input' autocomplete='off' placeholder='جستجو...'>",
+                afterInit: function (ms) {
+                    var that = this,
+                        $selectableSearch = that.$selectableUl.prev(),
+                        $selectionSearch = that.$selectionUl.prev(),
+                        selectableSearchString =
+                            '#' + that.$container.attr('id') + ' .ms-elem-selectable:not(.ms-selected)',
+                        selectionSearchString = '#' + that.$container.attr('id') + ' .ms-elem-selection.ms-selected';
+
+                    that.qs1 = $selectableSearch.quicksearch(selectableSearchString)
+                        .on('keydown',
+                            function (e) {
+                                if (e.which === 40) {
+                                    that.$selectableUl.focus();
+                                    return false;
+                                }
+                            });
+
+                    that.qs2 = $selectionSearch.quicksearch(selectionSearchString)
+                        .on('keydown',
+                            function (e) {
+                                if (e.which == 40) {
+                                    that.$selectionUl.focus();
+                                    return false;
+                                }
+                            });
+                },
+                afterSelect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                },
+                afterDeselect: function () {
+                    this.qs1.cache();
+                    this.qs2.cache();
+                }
+            });
+        });
+    </script>
+}
